@@ -1,0 +1,12 @@
+.icons {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+    font-size: 40px;
+}
+
+.icons svg {
+
+}
