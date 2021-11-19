@@ -1,0 +1,11 @@
+.avatar {
+    width: 47px;
+    max-width: 300px;
+    flex-shrink: 0;
+}
+
+.photo {
+    display: block;
+    width: 100%;
+    border-radius: 299px;
+}

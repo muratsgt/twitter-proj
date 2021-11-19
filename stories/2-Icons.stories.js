@@ -1,4 +1,5 @@
 import * as Icons from "../components/icons";
+import Avatar from "../components/Avatar";
 
 export default {
     title: "Icons"
@@ -10,6 +11,7 @@ export const Icon = () => (
         <Icons.Bookmark />
         <Icons.BookmarkFill />
         <Icons.Close />
+        <Icons.Dots />
         <Icons.Emoji />
         <Icons.Explore />
         <Icons.ExplorerFill />
@@ -40,3 +42,9 @@ export const Icon = () => (
         <Icons.Twitter />
     </div>
 );
+
+export const Photo = () => {
+    return (
+        <Avatar></Avatar>
+    )
+}

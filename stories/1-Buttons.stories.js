@@ -5,6 +5,7 @@ import TextTitle from "../components/TextTitle";
 import ThemeButton from "../components/ThemeButton";
 import Stack from "../components/Stack";
 import { Home } from "../components/icons";
+import ProfileButton from "../components/ProfileButton";
 
 export default {
   title: 'Buttons'
@@ -27,3 +28,5 @@ export const Theme = () => (
     <ThemeButton full big>Tweet</ThemeButton>
   </Stack>
 );
+
+export const Profile = () => (<ProfileButton></ProfileButton>);

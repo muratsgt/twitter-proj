@@ -1,0 +1,17 @@
+.box {
+    padding: 10px;
+}
+
+.box:hover {
+    color: var(--c-text-color);
+}
+
+.body {
+    margin-left: 13px;
+    margin-right: 23px;
+    text-align: left;
+}
+
+.arrow {
+    margin-left: auto;
+}
