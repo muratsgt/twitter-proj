@@ -1,5 +1,5 @@
-import Button from "../components/Button";
-import NavButton from "../components/NavButton";
+import Button from "../components/Button.js";
+import NavButton from "../components/NavButton.js";
 
 function HomePage() {
     return (

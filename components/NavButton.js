@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from "./Button";
+import Button from "./Button.js";
 import styles from "./NavButton.module.css";
 import cn from "classnames";
 

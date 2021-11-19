@@ -8,8 +8,9 @@
     "dev": "next dev",
     "start": "next start",
     "build": "next build",
+    "export": "next export",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -o public/ui",
     "lint": "next lint"
   },
   "keywords": [],
