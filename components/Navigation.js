@@ -1,8 +1,8 @@
 import React from 'react';
-import NavButton from './NavButton.js';
+import NavButton from './NavButton';
 import styles from "./Navigation.module.css";
 import { Twitter, Home, Explore, Notification, Messages, Bookmark, Lists, Profile, More } from "./icons";
-import TitleBold from './TitleBold.js';
+import TitleBold from './TitleBold';
 
 export default function Navigation({ children, selectedKey }) {
     return (
