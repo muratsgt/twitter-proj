@@ -1,16 +1,6 @@
 .navButton {
     position: relative;
-    color: var(--c-text-color);
     padding: 10px;
-    border-radius: 99px;
-    display: flex;
-    align-items: center;
-    transition: var(--fade);
-}
-
-.navButton:hover {
-    background-color: var(--c-theme-20);
-    color: var(--c-theme);
 }
 
 .navButton:hover span {

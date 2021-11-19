@@ -1,7 +1,9 @@
 import Button from "../components/Button";
 import NavButton from "../components/NavButton";
 import Navigation from "../components/Navigation";
-import TitleBold from "../components/TitleBold";
+import TextTitle from "../components/TextTitle";
+import ThemeButton from "../components/ThemeButton";
+import Stack from "../components/Stack";
 import { Home } from "../components/icons";
 
 export default {
@@ -12,7 +14,16 @@ export const Normal = () => (<Button>Save</Button>);
 
 export const Nav = () => (<NavButton>
   <Home />
-  <TitleBold>Home</TitleBold>
+  <TextTitle>Home</TextTitle>
 </NavButton>);
 
-export const Navi = () => (<Navigation selectedKey="home"></Navigation>);
+export const SideNavigation = () => (<Navigation selectedKey="home"></Navigation>);
+
+
+export const Theme = () => (
+  <Stack column>
+    <ThemeButton>Tweet</ThemeButton>
+    <ThemeButton full>Tweet</ThemeButton>
+    <ThemeButton full big>Tweet</ThemeButton>
+  </Stack>
+);

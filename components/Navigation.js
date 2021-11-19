@@ -2,7 +2,7 @@ import React from 'react';
 import NavButton from './NavButton';
 import styles from "./Navigation.module.css";
 import { Twitter, Home, Explore, Notification, Messages, Bookmark, Lists, Profile, More } from "./icons";
-import TitleBold from './TitleBold';
+import TextTitle from './TextTitle';
 
 export default function Navigation({ children, selectedKey }) {
     return (
@@ -12,35 +12,35 @@ export default function Navigation({ children, selectedKey }) {
             </NavButton>
             <NavButton selected = {selectedKey === "home"}>
                 <Home />
-                <TitleBold>Home</TitleBold>
+                <TextTitle>Home</TextTitle>
             </NavButton>
             <NavButton selected = {selectedKey === "explore"} >
                 <Explore />
-                <TitleBold>Explore</TitleBold>
+                <TextTitle>Explore</TextTitle>
             </NavButton>
             <NavButton notify={17} selected = {selectedKey === "notification"} >
                 <Notification />
-                <TitleBold>Notification</TitleBold>
+                <TextTitle>Notification</TextTitle>
             </NavButton>
             <NavButton selected = {selectedKey === "messages"} >
                 <Messages />
-                <TitleBold>Messages</TitleBold>
+                <TextTitle>Messages</TextTitle>
             </NavButton>
             <NavButton selected = {selectedKey === "bookmark"} >
                 <Bookmark />
-                <TitleBold>Bookmark</TitleBold>
+                <TextTitle>Bookmark</TextTitle>
             </NavButton>
             <NavButton selected = {selectedKey === "lists"} >
                 <Lists />
-                <TitleBold>Lists</TitleBold>
+                <TextTitle>Lists</TextTitle>
             </NavButton>
             <NavButton selected = {selectedKey === "profile"} >
                 <Profile />
-                <TitleBold>Profile</TitleBold>
+                <TextTitle>Profile</TextTitle>
             </NavButton>
             <NavButton selected = {selectedKey === "more"} >
                 <More />
-                <TitleBold>More</TitleBold>
+                <TextTitle>More</TextTitle>
             </NavButton>
             {children}
         </nav>
