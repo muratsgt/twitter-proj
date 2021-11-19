@@ -1,4 +1,5 @@
 .icons {
+    color: var(--c-text-color);
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     gap: 20px;

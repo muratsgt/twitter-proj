@@ -16,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "classnames": "^2.3.1",
     "next": "^12.0.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
@@ -25,8 +26,12 @@
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",
+    "@storybook/addon-postcss": "^2.0.0",
     "@storybook/react": "^6.3.12",
     "babel-loader": "^8.2.3",
+    "html-webpack-plugin": "^5.5.0",
+    "postcss-loader": "^6.2.0",
+    "postcss-nested": "^5.0.6",
     "storybook-css-modules-preset": "^1.1.1"
   }
 }

@@ -1,4 +1,5 @@
-import Button from "../components/button"
+import Button from "../components/Button";
+import NavButton from "../components/NavButton";
 
 function HomePage() {
     return (
@@ -7,6 +8,7 @@ function HomePage() {
                 Welcome to Next.js!
             </h1>
             <Button>Merhaba</Button>
+            <NavButton>Nav Tusu</NavButton>
         </div>
     )
 }
