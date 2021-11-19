@@ -39,4 +39,4 @@ export const Icon = () => (
         <Icons.Tweet />
         <Icons.Twitter />
     </div>
-)
+);

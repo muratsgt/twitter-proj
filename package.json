@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "build-storybook": "build-storybook"
+    "build": "next build",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "lint": "next lint"
   },
   "keywords": [],
   "author": "",

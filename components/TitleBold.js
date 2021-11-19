@@ -6,6 +6,6 @@ function TitleBold({ children }) {
             {children}
         </h2>
     )
-}
+};
 
-export default TitleBold
+export default TitleBold;
