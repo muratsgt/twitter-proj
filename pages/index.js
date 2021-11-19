@@ -1,7 +1,7 @@
 import Button from "../components/Button";
 import NavButton from "../components/NavButton";
 
-function HomePage() {
+function Home() {
     return (
         <div>
             <h1>
@@ -11,6 +11,6 @@ function HomePage() {
             <NavButton>Nav Tusu</NavButton>
         </div>
     )
-}
+};
 
-export default HomePage
+export default Home;

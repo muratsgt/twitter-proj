@@ -1,38 +1,30 @@
 {
-  "name": "twitter-proj",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "twitter-next-story",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next dev",
-    "start": "next start",
     "build": "npm run build-storybook && next build",
-    "export": "next export",
+    "start": "next start",
+    "lint": "next lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o public/ui",
-    "lint": "next lint"
+    "build-storybook": "build-storybook -o public/ui"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "classnames": "^2.3.1",
-    "next": "^12.0.4",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "next": "12.0.4",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@storybook/addon-actions": "^6.3.12",
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",
-    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/builder-webpack5": "^6.3.12",
+    "@storybook/manager-webpack5": "^6.3.12",
     "@storybook/react": "^6.3.12",
     "babel-loader": "^8.2.3",
-    "html-webpack-plugin": "^5.5.0",
-    "postcss-loader": "^6.2.0",
-    "postcss-nested": "^5.0.6",
-    "storybook-css-modules-preset": "^1.1.1"
+    "eslint": "7.32.0",
+    "eslint-config-next": "12.0.4"
   }
 }
