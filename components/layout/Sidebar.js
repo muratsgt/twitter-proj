@@ -3,14 +3,16 @@ import styles from "./Sidebar.module.css";
 import Navigation from "../Navigation";
 import ThemeButton from "../ThemeButton";
 import ProfileButton from "../ProfileButton";
+import { Tweet } from "../icons";
 
-function Sidebar({ children, ...props}) {
-
+function Sidebar({ wide = true, children, ...props }) {
     return (
         <div className={styles.sidebar} {...props}>
-            <Navigation></Navigation>
-            <ThemeButton full big>Tweet</ThemeButton>
-            <ProfileButton></ProfileButton>
+            <Navigation wide={wide}></Navigation>
+            <ThemeButton wide={wide} full={wide} big className={styles.tweet}>
+                {wide ? "Tweet" : <Tweet />}
+            </ThemeButton>
+            <ProfileButton wide={wide} className={styles.profile} ></ProfileButton>
             {children}
         </div>
     )

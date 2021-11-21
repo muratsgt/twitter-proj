@@ -1,4 +1,5 @@
 .main {
     max-width: 600px;
-    background-color: tomato;
+    border-left: solid 1px #333;
+    border-right: solid 1px #333;
 }

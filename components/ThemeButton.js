@@ -3,10 +3,12 @@ import Button from "./Button";
 import styles from "./ThemeButton.module.css";
 import cn from "classnames";
 
-export default function ThemeButton({ children, ...props }) {
+export function ThemeButton({ children, className, ...props }) {
     return (
-        <Button className={cn(styles.button)} {...props}>
+        <Button className={cn(styles.button, className)} {...props}>
             {children}
         </Button>
     )
 };
+
+export default React.memo(ThemeButton);

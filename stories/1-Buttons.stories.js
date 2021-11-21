@@ -1,32 +1,28 @@
 import Button from "../components/Button";
 import NavButton from "../components/NavButton";
-import Navigation from "../components/Navigation";
 import TextTitle from "../components/TextTitle";
 import ThemeButton from "../components/ThemeButton";
-import Stack from "../components/Stack";
 import { Home } from "../components/icons";
 import ProfileButton from "../components/ProfileButton";
 
+
 export default {
-  title: 'Buttons'
+  title: 'Buttons',
+  args: {
+    full: false,
+    big: false
+  }
 };
 
-export const Normal = () => (<Button>Save</Button>);
+export const Normal = (args) => (<Button {...args}>Save</Button>);
 
-export const Nav = () => (<NavButton>
+export const Nav = (args) => (<NavButton {...args}>
   <Home />
   <TextTitle>Home</TextTitle>
 </NavButton>);
 
-export const SideNavigation = () => (<Navigation selectedKey="home"></Navigation>);
-
-
-export const Theme = () => (
-  <Stack column>
-    <ThemeButton>Tweet</ThemeButton>
-    <ThemeButton full>Tweet</ThemeButton>
-    <ThemeButton full big>Tweet</ThemeButton>
-  </Stack>
+export const Theme = (args) => (
+  <ThemeButton {...args}>Tweet</ThemeButton>
 );
 
-export const Profile = () => (<ProfileButton></ProfileButton>);
+export const Profile = (args) => (<ProfileButton {...args}></ProfileButton>);

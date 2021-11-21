@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: var(--fade);
+    /* transition: var(--fade); */
 }
 
 .button:hover {
@@ -14,10 +14,10 @@
     color: var(--c-theme);
 }
 
-.fullB{
+.fullB {
     width: 100%;
 }
 
-.bigB{
-    height: 47px;
+.bigB {
+    height: 50px;
 }

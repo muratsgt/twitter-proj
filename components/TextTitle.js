@@ -1,7 +1,7 @@
 import styles from "./TextTitle.module.css";
 import cn from "classnames";
 
-function TextTitle({ bold = true, children, ...props }) {
+function TextTitle({ bold = false, children, ...props }) {
     return (
         <h2 className={cn(styles.titleText, bold && styles.boldText) } >
             {children}

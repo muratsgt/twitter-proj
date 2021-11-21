@@ -1,7 +1,8 @@
 import styles from "./Button.module.css";
 import cn from "classnames";
+import Link from "next/link";
 
-export default function Button({ children, className, full=false, big=false, ...props }) {
+export default function Button({ children, className, full = false, big = false, ...props }) {
     return (
         <button
             type="button"
