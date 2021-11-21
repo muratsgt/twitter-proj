@@ -1,0 +1,15 @@
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    background-color: var(--c-primary);
+    min-height: 100vh;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+@media screen and (min-width: 990px) {
+    .layout {
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+}

@@ -1,5 +1,6 @@
 .avatar {
-    width: 47px;
+    width: 41px;
+    height: 41px;
     max-width: 300px;
     flex-shrink: 0;
 }
@@ -7,5 +8,6 @@
 .photo {
     display: block;
     width: 100%;
+    height: 100%;
     border-radius: 299px;
 }
