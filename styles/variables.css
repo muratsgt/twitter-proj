@@ -1,11 +1,36 @@
 :root {
-    --c-primary: #000;
-    --c-theme: rgba(29,161,242,1);
-    --c-theme-20: rgba(29,161,242,0.2);
-    --c-theme-80: rgba(29,161,242,0.8);
+    --c-primary: #fff;
+    --c-theme: rgba(29, 161, 242, 1);
+    --c-theme-10: rgba(29, 161, 242, 0.1);
+    --c-theme-20: rgba(29, 161, 242, 0.2);
+    --c-theme-80: rgba(29, 161, 242, 0.8);
+    --c-text-color: #000;
+    --c-border-color: #eee;
+    --c-gray: #6E7670;
+    --c-dark-gray: #202327;
+    --fade: 150ms;
+}
+
+.dim:root {
+    --c-primary: rgb(21, 32, 43);
+    --c-theme: rgba(29, 161, 242, 1);
+    --c-theme-10: rgba(29, 161, 242, 0.1);
+    --c-theme-20: rgba(29, 161, 242, 0.2);
+    --c-theme-80: rgba(29, 161, 242, 0.8);
     --c-text-color: #fff;
     --c-border-color: #2f3336;
     --c-gray: #6E7670;
     --c-dark-gray: #202327;
-    --fade: 150ms;
+}
+
+.dark:root {
+    --c-primary: #000;
+    --c-theme: rgba(29, 161, 242, 1);
+    --c-theme-10: rgba(29, 161, 242, 0.1);
+    --c-theme-20: rgba(29, 161, 242, 0.2);
+    --c-theme-80: rgba(29, 161, 242, 0.8);
+    --c-text-color: #fff;
+    --c-border-color: #2f3336;
+    --c-gray: #6E7670;
+    --c-dark-gray: #202327;
 }

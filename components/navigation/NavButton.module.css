@@ -3,8 +3,8 @@
     padding: 12px;
 }
 
-.navButton:hover span {
-    color: var(--c-text-color);
+.navButton span {
+    color: white;
 }
 
 .navButton svg {
@@ -18,10 +18,6 @@
 
 .navButtonSelected {
     color: var(--c-theme);
-}
-
-.navButtonSelected span {
-    color: var(--c-text-color);
 }
 
 .notify {

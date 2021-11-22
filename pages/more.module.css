@@ -1,0 +1,52 @@
+.more {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid var(--c-border-color);
+}
+.container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container label {
+    border: 1px solid var(--c-border-color);
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.container input {
+    height: 1em;
+    width: 1em;
+    margin: 10px;
+}
+
+.light {
+    background-color: #fff;
+    color: #000;
+}
+
+.dim {
+    background-color: rgb(21, 32, 43);
+    color: #fff;
+}
+
+.dark {
+    background-color: #000;
+    color: #fff;
+}
+
+.head {
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+}

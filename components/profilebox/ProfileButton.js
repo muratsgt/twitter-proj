@@ -1,9 +1,10 @@
-import React from 'react';
-import Button from "./Button";
 import styles from "./ProfileButton.module.css";
+
+import Button from "../button/Button";
 import Avatar from './Avatar';
-import TextBody from './TextBody';
-import { Dots } from "../components/icons"
+import TextBody from '../text/TextBody';
+import { Dots } from "../icons"
+
 import cn from "classnames";
 
 export default function ProfileButton({ wide=true, name = "Name Surname", adress = "adress", children, className, ...props }) {

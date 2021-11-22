@@ -1,3 +1,4 @@
+import {useRouter} from "next/router";
 import Layout from "../components/layout/Layout";
 import Tweet from "../components/tweet";
 
@@ -22,8 +23,13 @@ const TWEET2 = {
 }
 
 function Home() {
+
+    const router = useRouter();
+    const {user} = router.query;
+
     return (
         <Layout>
+            Tweets from {user}
             <Tweet entry={TWEET}></Tweet>
             <Tweet entry={TWEET2}></Tweet>
         </Layout>

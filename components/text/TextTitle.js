@@ -1,4 +1,5 @@
 import styles from "./TextTitle.module.css";
+
 import cn from "classnames";
 
 function TextTitle({ bold = false, children, ...props }) {

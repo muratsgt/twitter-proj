@@ -6,11 +6,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* transition: var(--fade); */
+    transition: var(--fade);
 }
 
 .button:hover {
-    background-color: var(--c-theme-20);
+    background-color: var(--c-theme-10);
     color: var(--c-theme);
 }
 

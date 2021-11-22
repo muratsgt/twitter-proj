@@ -2,7 +2,7 @@
     position: relative;
     padding: 10px;
     background-color: var(--c-theme);
-    color: var(--c-text-color);
+    color: white;
     padding-left: 16px;
     padding-right: 16px;
     font-weight: bold;
@@ -10,5 +10,5 @@
 
 .button:hover {
     background-color: var(--c-theme-80);
-    color: var(--c-text-color);
+    color: white;
 }
