@@ -1,13 +1,11 @@
-import styles from "./ProfileButton.module.css";
-
-import Button from "../button/Button";
-import Avatar from './Avatar';
-import TextBody from '../text/TextBody';
-import { Dots } from "../icons"
-
+import styles from "./style.module.css";
+import Button from "../Button";
+import Avatar from '../../Avatar';
+import { TextBody } from '../../Text';
+import { Dots } from "../../Icons"
 import cn from "classnames";
 
-export default function ProfileButton({ wide=true, name = "Name Surname", adress = "adress", children, className, ...props }) {
+export default function ProfileButton({ wide = true, name = "Name Surname", adress = "adress", children, className, ...props }) {
     return (
         <Button full className={cn(styles.box, className)} {...props}>
             <Avatar />

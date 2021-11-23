@@ -1,10 +1,9 @@
-import Button from "../components/Button";
-import NavButton from "../components/NavButton";
-import TextTitle from "../components/TextTitle";
-import ThemeButton from "../components/ThemeButton";
-import { Home } from "../components/icons";
-import ProfileButton from "../components/ProfileButton";
-
+import TextTitle from "../components/Text/TextTitle";
+import ThemeButton from "../components/buttons/ThemeButton";
+import { Home } from "../components/Icons";
+import Button from "../components/buttons/Button";
+import ProfileButton from "../components/buttons/Profilebutton";
+import NavButton from "../components/Navigation/NavButton";
 
 export default {
   title: 'Buttons',
@@ -15,6 +14,7 @@ export default {
 };
 
 export const Normal = (args) => (<Button {...args}>Save</Button>);
+
 
 export const Nav = (args) => (<NavButton {...args}>
   <Home />

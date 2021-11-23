@@ -1,5 +1,4 @@
-import styles from "./Button.module.css";
-
+import styles from "./style.module.css";
 import cn from "classnames";
 
 export default function Button({ children, className, full = false, big = false, ...props }) {

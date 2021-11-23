@@ -1,9 +1,8 @@
 import styles from "./Sidebar.module.css";
-
-import Navigation from "../navigation/Navigation";
-import ThemeButton from "../button/ThemeButton";
-import ProfileButton from "../profilebox/ProfileButton";
-import { Tweet } from "../icons";
+import Navigation from "../components/Navigation";
+import ThemeButton from "../components/buttons/ThemeButton";
+import ProfileButton from "../components/buttons/Profilebutton";
+import { Tweet } from "../components/Icons";
 
 function Sidebar({ wide = true, children, ...props }) {
     return (

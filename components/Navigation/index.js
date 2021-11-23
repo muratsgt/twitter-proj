@@ -1,7 +1,7 @@
-import styles from "./Navigation.module.css";
-import NavButton from './NavButton';
-import TextTitle from '../text/TextTitle';
-import { Twitter } from "../icons";
+import styles from "./style.module.css";
+import NavButton from "../buttons/NavButton";
+import { TextTitle } from "../Text";
+import { Twitter } from "../Icons";
 import { MENU } from '../../constants';
 
 import React from 'react';

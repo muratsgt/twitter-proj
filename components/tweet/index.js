@@ -1,8 +1,8 @@
 import styles from "./style.module.css";
-import Avatar from "../profilebox/Avatar";
-import Button from "../button/Button";
+import Avatar from "../Avatar";
+import Button from "../buttons/Button";
 import Link from "next/link";
-import * as Icon from "../icons";
+import * as Icon from "../Icons";
 import { formatDistanceToNowStrict } from 'date-fns';
 
 

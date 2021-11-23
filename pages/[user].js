@@ -1,6 +1,6 @@
 import {useRouter} from "next/router";
-import Layout from "../components/layout/Layout";
-import Tweet from "../components/tweet";
+import Layout from "../layout/Layout";
+import Tweet from "../components/Tweet";
 
 const TWEET = {
     username: "Murat Akca",

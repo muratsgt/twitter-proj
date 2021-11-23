@@ -1,6 +1,5 @@
-import styles from "./ThemeButton.module.css";
-import Button from "./Button";
-
+import styles from "./style.module.css";
+import Button from "../Button";
 import React from 'react';
 import cn from "classnames";
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import * as Icon from "../components/icons";
+import * as Icon from "../components/Icons";
 
 export const SIZES = {
     HANDY: 490,

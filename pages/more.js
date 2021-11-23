@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import Layout from "../components/layout/Layout";
+import Layout from "../layout/Layout";
 import ThemeContext from "../store";
 import styles from "./more.module.css";
 
