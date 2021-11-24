@@ -1,0 +1,42 @@
+
+
+.modal {
+    background-color: var(--c-primary);
+    border-radius: 15px;
+    border: solid 1px var(--c-text-color);
+}
+
+.modalcontainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.inputBox{
+    min-height: 200px;
+    min-width: 400px;
+    background-color: transparent;
+    color: var(--c-text-color);
+    outline: none;
+    white-space: pre-wrap;
+    font-size: 1.3em;
+}
+
+.modalbody{
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+.modalbuttons{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    border-top: solid 1px var(--c-border-color);
+}
+
+.modalbuttons svg {
+    color: var(--c-theme);
+}
+
+.tweetbutton{
+    margin-left: auto;
+}
