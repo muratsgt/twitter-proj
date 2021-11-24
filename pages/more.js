@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Layout from "../layout/Layout";
 import ThemeContext from "../store";
 import styles from "./more.module.css";
+import MainHeader from "../components/MainHeader";
 
 function More() {
     const context = useContext(ThemeContext);
@@ -11,6 +12,8 @@ function More() {
 
     return (
         <Layout>
+            <MainHeader title="Options"></MainHeader>
+
             <div className={styles.more}>
                 <h2 className={styles.head}>Theme</h2>
                 <div className={styles.container}>

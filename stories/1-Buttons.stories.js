@@ -1,9 +1,10 @@
-import TextTitle from "../components/Text/TextTitle";
-import ThemeButton from "../components/buttons/ThemeButton";
+import { TextTitle } from "../components/Text";
 import { Home } from "../components/Icons";
 import Button from "../components/buttons/Button";
+import ThemeButton from "../components/buttons/ThemeButton";
 import ProfileButton from "../components/buttons/Profilebutton";
-import NavButton from "../components/Navigation/NavButton";
+import NavButton from "../components/buttons/NavButton";
+
 
 export default {
   title: 'Buttons',

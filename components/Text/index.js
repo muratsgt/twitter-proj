@@ -9,9 +9,17 @@ export function TextBody({ bold = false, children, className, ...props }) {
     )
 };
 
+export function AdressText({children, className, ...props }) {
+    return (
+        <p className={cn(styles.adress, className)} {...props}>
+            {children}
+        </p>
+    )
+};
+
 export function TextTitle({ bold = false, children, ...props }) {
     return (
-        <h2 className={cn(styles.titleText, bold && styles.boldText)} {...props}>
+        <h2 className={cn(styles.titleText, bold && styles.bold)} {...props}>
             {children}
         </h2>
     )

@@ -1,8 +1,11 @@
 import Layout from "../layout/Layout";
+import MainHeader from "../components/MainHeader";
 
 function Lists() {
     return (
-        <Layout>Lists</Layout>
+        <Layout>
+            <MainHeader back title="Lists"></MainHeader>
+        </Layout>
     )
 };
 

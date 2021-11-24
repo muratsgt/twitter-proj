@@ -1,0 +1,17 @@
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+    width: 34px;
+    cursor: pointer;
+    background: transparent;
+    color: var(--c-text-color);
+    border-radius: 99px;
+    transition: var(--fade);
+    font-size: 1.3em;
+}
+
+.button:hover {
+    background-color: var(--c-theme-10);
+}

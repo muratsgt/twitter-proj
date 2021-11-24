@@ -1,4 +1,6 @@
 .body {
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .bold {
@@ -9,6 +11,6 @@
     font-size: 20px;
 }
 
-.boldText {
-    font-weight: bold;
+.adress {
+    color: var(--c-gray);
 }

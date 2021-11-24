@@ -1,61 +1,31 @@
 import styles from "./style.module.css";
 import Avatar from "../Avatar";
-import Button from "../buttons/Button";
+import Footer from "./Footer";
 import Link from "next/link";
-import * as Icon from "../Icons";
-import { formatDistanceToNowStrict } from 'date-fns';
-
+import { Header } from "./Header";
 
 function Tweet({ entry, children }) {
     return (
         <div className={styles.container}>
             <div className={styles.avatar}>
                 <Link href={entry?.useradress} >
-                    <a>
-                        <Avatar></Avatar>
-                    </a>
+                    <a><Avatar /></a>
                 </Link>
-
             </div>
             <div className={styles.body}>
-                <header className={styles.header}>
-                    <Link href={entry?.useradress} >
-                        <a className={styles.name}>
-                            {entry?.username}
-                        </a>
-                    </Link>
-                    <span> @{entry?.useradress} </span>
-                    <span>{"· "}{formatDistanceToNowStrict(entry?.time)}</span>
-                </header>
+                <Header entry={entry}></Header>
                 <div className={styles.content}>
-                    {entry?.content}
+                    <div>
+                        {entry?.content}
+                    </div>
+                    {entry?.imgContent &&
+                        <div className={styles.imgContent}>
+                            <img src={entry?.imgContent} alt="content" />
+                        </div>
+                    }
                     {children}
                 </div>
-                <footer className={styles.footer}>
-                    <div className={styles.iconBox}>
-                        <Button className={styles.iconButton}>
-                            <Icon.Reply />
-                        </Button>
-                        <span>{entry.replied}</span>
-                    </div>
-                    <div className={styles.iconBox}>
-                        <Button className={styles.iconButton}>
-                            <Icon.Retweet />
-                        </Button>
-                        <span>{entry.retweeted}</span>
-                    </div>
-                    <div className={styles.iconBox}>
-                        <Button className={styles.iconButton}>
-                            <Icon.Like />
-                        </Button>
-                        <span>{entry.liked}</span>
-                    </div>
-                    <div className={styles.iconBox}>
-                        <Button className={styles.iconButton}>
-                            <Icon.Share />
-                        </Button>
-                    </div>
-                </footer>
+                <Footer entry={entry}></Footer>
             </div>
 
         </div>

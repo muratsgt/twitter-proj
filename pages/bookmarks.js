@@ -1,8 +1,11 @@
 import Layout from "../layout/Layout";
+import MainHeader from "../components/MainHeader";
 
 function Bookmarks() {
     return (
-        <Layout>Bookmarks</Layout>
+        <Layout>
+            <MainHeader title="Bookmarks"></MainHeader>
+        </Layout>
     )
 };
 

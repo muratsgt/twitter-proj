@@ -8,7 +8,7 @@ import cn from "classnames";
 export default function ProfileButton({ wide = true, name = "Name Surname", adress = "adress", children, className, ...props }) {
     return (
         <Button full className={cn(styles.box, className)} {...props}>
-            <Avatar />
+            <Avatar size="profbutton"/>
             {wide && <>
                 <div className={styles.body}>
                     <TextBody bold>{name}</TextBody>

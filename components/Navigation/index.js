@@ -10,7 +10,7 @@ import { useRouter } from 'next/router'
 
 export default function Navigation({ wide = true, children }) {
     const router = useRouter();
-    const selectedKey = router.asPath;
+    const selectedKey = router?.asPath;
 
     return (
         <nav className={styles.nav}>

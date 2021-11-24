@@ -1,8 +1,11 @@
 import Layout from "../layout/Layout";
+import MainHeader from "../components/MainHeader";
 
 function Profile() {
     return (
-        <Layout>Profile</Layout>
+        <Layout>
+            <MainHeader back tweetNum={67} title="Profile"></MainHeader>
+        </Layout>
     )
 };
 

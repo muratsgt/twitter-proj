@@ -6,8 +6,8 @@
     --c-theme-80: rgba(29, 161, 242, 0.8);
     --c-text-color: #000;
     --c-border-color: #eee;
-    --c-gray: #6E7670;
-    --c-dark-gray: #202327;
+    --c-gray: #5E6660;
+    --c-dark-gray: rgb(245, 245, 245);;
     --fade: 150ms;
 }
 
@@ -19,8 +19,8 @@
     --c-theme-80: rgba(29, 161, 242, 0.8);
     --c-text-color: #fff;
     --c-border-color: #2f3336;
-    --c-gray: #6E7670;
-    --c-dark-gray: #202327;
+    --c-gray: #5E6660;
+    --c-dark-gray: rgb(25, 39, 52);
 }
 
 .dark:root {
@@ -31,6 +31,6 @@
     --c-theme-80: rgba(29, 161, 242, 0.8);
     --c-text-color: #fff;
     --c-border-color: #2f3336;
-    --c-gray: #6E7670;
+    --c-gray: #5E6660;
     --c-dark-gray: #202327;
 }

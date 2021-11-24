@@ -9,6 +9,9 @@
     margin-right: auto;
 }
 
+.extra {
+}
+
 
 @media screen and (min-width: 1020px) {
     .layout {
@@ -19,14 +22,14 @@
 
 @media screen and (min-width: 1120px) {
     .layout {
-        max-width: 1120px;
-        grid-template-columns: auto 1fr 350px;
+        max-width: 1100px;
+        grid-template-columns: auto 1fr 360px;
     }
 }
 
 @media screen and (min-width: 1280px) {
     .layout {
-        max-width: 1280px;
-        grid-template-columns: 264px 1fr 350px;
+        max-width: 1250px;
+        grid-template-columns: 264px 1fr 360px;
     }
 }

@@ -1,8 +1,11 @@
 import Layout from "../layout/Layout";
+import MainHeader from "../components/MainHeader";
 
 function Notifications() {
     return (
-        <Layout>Notifications</Layout>
+        <Layout>
+            <MainHeader title="Notifications"></MainHeader>
+        </Layout>
     )
 };
 

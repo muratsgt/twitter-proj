@@ -1,0 +1,70 @@
+.container {
+    position: relative;
+    border-bottom: 1px solid var(--c-border-color);
+    padding-bottom: 10px;
+}
+
+.body {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.actions {
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.actions > * {
+    border: 1px solid var(--c-border-color);
+}
+
+.profilePicture {
+    cursor: pointer;
+    width: 130px;
+    position: absolute;
+    top: 130px;
+    left: 15px;
+    border-radius: 299px;
+}
+
+.profilePicture img {
+    outline: 5px solid var(--c-primary);
+    border-radius: 299px;
+    z-index: 1;
+}
+
+.bio {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.date{
+    color: var(--c-gray);
+    white-space: pre-wrap;
+}
+
+.date span{
+    margin-right: 10px;
+}
+
+.links {
+    margin-top: 10px;
+}
+
+.links a{
+    text-decoration: none;
+    margin-right: 10px;
+    color: var(--c-gray);
+}
+
+.links a:hover{
+    text-decoration: underline 1px white;
+}
+
+.links span {
+    color: var(--c-text-color);
+}

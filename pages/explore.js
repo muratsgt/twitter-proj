@@ -1,8 +1,11 @@
 import Layout from "../layout/Layout";
+import MainHeader from "../components/MainHeader";
 
 function Explore() {
     return (
-        <Layout>Explore</Layout>
+        <Layout>
+            <MainHeader title="Explore"></MainHeader>
+        </Layout>
     )
 };
 

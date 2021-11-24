@@ -1,3 +1,12 @@
 .extra {
+    display: flex;
+    flex-direction: column;
     max-width: 350px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.search {
+    position: sticky;
+    top: 0;
 }

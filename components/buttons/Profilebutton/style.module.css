@@ -10,6 +10,13 @@
     margin-left: 13px;
     margin-right: 23px;
     text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.body p {
+    white-space: nowrap;
 }
 
 .dots {

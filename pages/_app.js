@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 import ThemeContext from "../store";
-import { useState, useEffect, useLayoutEffect } from 'react';
+import { useState, useEffect} from 'react';
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState("");
@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
     localStorage.setItem("THEME", value)
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const lastTheme = localStorage.getItem("THEME");
     setTheme(lastTheme);
   }, [])

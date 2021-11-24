@@ -1,0 +1,33 @@
+.area {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: var(--c-primary);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--c-dark-gray);
+    padding-left: 20px;
+    border-radius: 99px;
+    outline-color: var(--c-theme);
+    font-size: 1.2em;
+    padding: 12px;
+}
+
+.container:focus-within {
+    border: solid 1px var(--c-theme);
+    background-color: inherit;
+    color: var(--c-theme);
+}
+
+.container input {
+    font-size: 1rem;
+    color: var(--c-text-color);
+    padding-left: 15px;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background-color: transparent;
+}

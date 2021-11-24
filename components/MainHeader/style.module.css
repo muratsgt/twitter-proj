@@ -1,0 +1,25 @@
+.area {
+    position: sticky;
+    top: 0;
+    padding: 7px 16px;
+    background-color: var(--c-primary);
+    border-bottom: solid 1px var(--c-border-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 10;
+}
+
+.textarea {
+    display: flex;
+    flex-direction: column;
+}
+
+.textarea span {
+    color: var(--c-gray);
+    font-size: 0.8em;
+}
+
+.backbutton {
+    margin-right: 30px;
+}

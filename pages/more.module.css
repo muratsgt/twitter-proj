@@ -31,16 +31,19 @@
 }
 
 .light {
-    background-color: #fff;
+    border-radius: 99px;
+    background-color: #eee;
     color: #000;
 }
 
 .dim {
+    border-radius: 99px;
     background-color: rgb(21, 32, 43);
     color: #fff;
 }
 
 .dark {
+    border-radius: 99px;
     background-color: #000;
     color: #fff;
 }
