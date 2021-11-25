@@ -1,17 +1,14 @@
-.modal {
-    background-color: var(--c-primary);
-    border-radius: 15px;
-    border: solid 1px var(--c-text-color);
-}
-
 .modalcontainer{
+    padding: 12px 16px;
     display: flex;
     flex-direction: row;
+    border-bottom: solid 2px var(--c-border-color);
 }
 
 .inputBox{
-    min-height: 200px;
-    min-width: 400px;
+    min-height: 60px;
+    width: 100%;
+    resize: none;
     background-color: transparent;
     color: var(--c-text-color);
     outline: none;
@@ -20,6 +17,8 @@
 }
 
 .modalbody{
+    width: 100%;
+    height: fit-content;
     padding-top: 10px;
     padding-left: 15px;
 }
@@ -28,7 +27,6 @@
     padding-top: 10px;
     display: flex;
     flex-direction: row;
-    border-top: solid 1px var(--c-border-color);
 }
 
 .modalbuttons svg {

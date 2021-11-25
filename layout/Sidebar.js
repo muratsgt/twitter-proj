@@ -6,6 +6,7 @@ import ProfileButton from "../components/buttons/Profilebutton";
 import { Tweet } from "../components/Icons";
 import 'react-responsive-modal/styles.css';
 import { TweetModal } from '../modals/TweetModal';
+import {CurrentUser} from "../data";
 
 
 function Sidebar({ wide = true, children, ...props }) {
@@ -19,7 +20,13 @@ function Sidebar({ wide = true, children, ...props }) {
             <ThemeButton onClick={onOpenModal} full={wide} className={styles.tweet}>
                 {wide ? "Tweet" : <Tweet />}
             </ThemeButton>
-            <ProfileButton wide={wide} className={styles.profile} ></ProfileButton>
+            <ProfileButton
+                wide={wide}
+                className={styles.profile}
+                name={CurrentUser.name}
+                adress={CurrentUser.adress}
+                src={CurrentUser.imageUrl}
+            ></ProfileButton>
             <TweetModal
                 open={open}
                 onCloseModal={onCloseModal}

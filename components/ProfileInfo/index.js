@@ -6,9 +6,10 @@ import FollowButton from '../buttons/FollowButton';
 import * as Icon from "../Icons";
 import { TextTitle, TextBody, AdressText } from '../Text';
 import Link from 'next/link';
-import {format} from "date-fns";
+import { format } from "date-fns";
+import numFormatter from '../../helper/numFormatter';
 
-const options = { weekday: "long", year: 'numeric', month: 'long', day:"no" };
+const options = { weekday: "long", year: 'numeric', month: 'long', day: "no" };
 
 function ProfileInfo({ user, children, ...props }) {
     return (
@@ -30,17 +31,20 @@ function ProfileInfo({ user, children, ...props }) {
                     <AdressText>@{user.adress}</AdressText>
                     <TextBody className={styles.bio}>{user.bio}</TextBody>
                     <TextBody className={styles.date}>
+                        {
+                            user.location ? (
+                                <span>
+                                    <Icon.Messages /> {user.location}
+                                </span>) : null
+                        }
                         <span>
-                            <Icon.Messages /> {user.location}
-                        </span>
-                        <span>
-                            <Icon.Messages /> Joined {format(user.joined,"MMMM yyyy")}
+                            <Icon.Messages /> Joined {format(user.joined, "MMMM yyyy")}
                         </span>
                     </TextBody>
                 </div>
                 <div className={styles.links}>
-                    <Link href="/following"><a><span>{user.following}</span> Following</a></Link>
-                    <Link href="/followers"><a><span>{user.followers}</span> Followers</a></Link>
+                    <Link href="/following"><a><span>{numFormatter(user.following)}</span> Following</a></Link>
+                    <Link href="/followers"><a><span>{numFormatter(user.followers)}</span> Followers</a></Link>
                 </div>
             </div>
 
