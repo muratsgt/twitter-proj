@@ -12,7 +12,7 @@ function Tweet({ entry, children }) {
     }
 
     return (
-            <div onClick={handleClick} className={styles.container}>
+            <div className={styles.container}>
                 <div className={styles.avatar}>
                     <Link href={entry?.useradress} >
                         <a><Avatar src={entry?.userImage} /></a>
@@ -20,7 +20,7 @@ function Tweet({ entry, children }) {
                 </div>
                 <div className={styles.body}>
                     <Header entry={entry}></Header>
-                    <div className={styles.content}>
+                    <div onClick={handleClick} className={styles.content}>
                         <div>
                             {entry?.content}
                         </div>

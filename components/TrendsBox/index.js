@@ -2,9 +2,8 @@ import React from 'react';
 import styles from "./style.module.css";
 import { Options } from "../Icons";
 import { Topic } from './Topic';
-import {TRENDS} from "../../data";
 
-function TrendsBox() {
+function TrendsBox({ trends, ...props }) {
     return (
         <div className={styles.container}>
             <header className={styles.header}>
@@ -14,7 +13,7 @@ function TrendsBox() {
                 <Options></Options>
             </header>
             {
-                TRENDS.map((trend) => <Topic key={trend.hashTag} trend={trend}></Topic>)
+                trends.map((trend) => <Topic key={trend.hashTag} trend={trend}></Topic>)
             }
 
         </div>

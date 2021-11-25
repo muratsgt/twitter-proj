@@ -172,3 +172,43 @@ export const TRENDS = [
     },
 
 ]
+
+
+export const EXPLORETRENDS = [
+    {
+        hashTag: "#ReactJs",
+        category: "Technology",
+        tweets: 13135
+    },
+    {
+        hashTag: "#LOTR",
+        category: "Movies",
+        tweets: 331341
+    },
+    {
+        hashTag: "#Lewandowski",
+        category: "Germany",
+        tweets: 440988
+    },
+    {
+        hashTag: "Ridley Scott",
+        category: "Historical films",
+        tweets: 19565
+    },
+    {
+        hashTag: "#LateNightBerlin",
+        category: "Germany",
+        tweets: 13545
+    },
+    {
+        hashTag: "#Avengers",
+        category: "Film",
+        tweets: 124246
+    },
+    {
+        hashTag: "#GRAMMYs",
+        category: "Technology",
+        tweets: 952564
+    },
+
+]
