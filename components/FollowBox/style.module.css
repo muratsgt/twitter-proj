@@ -45,3 +45,12 @@
 .adres {
     color: #888;
 }
+
+
+.tooltip {
+    right: 100%;
+}
+
+.box:hover .tooltip {
+    visibility: visible;
+}

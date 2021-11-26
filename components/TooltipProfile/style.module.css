@@ -1,0 +1,72 @@
+.body {
+    padding: 12px 16px;
+    border-radius: 10px;
+    background-color: var(--c-primary);
+    border: 1px solid var(--c-border-color);
+    box-shadow: var(--c-border-color) 0px 0px 8px 2px;
+    width: 280px;
+    visibility: hidden;
+    position: absolute;
+    z-index: 12;
+    transition-delay: 0.6s;
+}
+
+.actions {
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.profilePicture {
+    cursor: pointer;
+    width: 130px;
+    position: absolute;
+    top: 130px;
+    left: 15px;
+    border-radius: 299px;
+}
+
+.profilePicture img {
+    outline: 5px solid var(--c-primary);
+    border-radius: 299px;
+    z-index: 1;
+}
+
+.bio {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.date {
+    color: var(--c-gray);
+    white-space: pre-wrap;
+}
+
+.date span {
+    margin-right: 10px;
+}
+
+.links {
+    margin-top: 10px;
+}
+
+.links a {
+    text-decoration: none;
+    margin-right: 10px;
+    color: var(--c-gray);
+}
+
+.links a:hover {
+    text-decoration: underline 1px white;
+}
+
+.links span {
+    color: var(--c-text-color);
+}
+
+.buttontrans {
+    transition: none;
+}

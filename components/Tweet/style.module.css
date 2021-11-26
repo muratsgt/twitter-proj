@@ -7,15 +7,14 @@
 }
 
 .avatar {
-    z-index: 1;
+    position: relative;
     display: flex;
     justify-content: center;
     padding-right: 12px;
     max-height: 50px;
 }
 
-.body {
-}
+.body {}
 
 .header {
     color: var(--c-gray);
@@ -78,4 +77,12 @@
 
 .imgContent img {
     width: 100%;
+}
+
+.tooltip {
+    top: 100%;
+}
+
+.avatar:hover .tooltip {
+    visibility: visible;
 }
