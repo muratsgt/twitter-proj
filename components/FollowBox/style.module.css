@@ -49,6 +49,7 @@
 
 .tooltip {
     right: 100%;
+    visibility: hidden;
 }
 
 .box:hover .tooltip {

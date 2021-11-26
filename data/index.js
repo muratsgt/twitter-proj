@@ -22,8 +22,6 @@ export const USERS = [
         followers: 64600000,
         joined: new Date("2009-06-06"),
         location: null,
-        following: 104,
-        followers: 64600000,
         followed: true,
     },
     {

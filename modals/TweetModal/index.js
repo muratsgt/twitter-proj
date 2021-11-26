@@ -43,11 +43,11 @@ export function TweetWriter(className, ...props) {
 }
 
 
-export function TweetModal(props) {
+export function TweetModal({ className, ...props }) {
 
     return (
         <Modal
-            classNames={{ modal: styles.modal }}
+            classNames={{ modal: cn(styles.modal, className) }}
             open={props.open}
             onClose={props.onCloseModal}
             center

@@ -5,7 +5,6 @@
     border: 1px solid var(--c-border-color);
     box-shadow: var(--c-border-color) 0px 0px 8px 2px;
     width: 280px;
-    visibility: hidden;
     position: absolute;
     z-index: 12;
     transition-delay: 0.6s;

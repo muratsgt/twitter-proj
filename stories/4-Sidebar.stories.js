@@ -1,10 +1,10 @@
-import Sidebar from "../layout/Sidebar";
+import Navigation from "../components/Navigation";
 
 export default {
-    title: 'Sidebar',
+    title: 'Navigation',
     args: {
         wide: true,
     }
 };
 
-const Template = (args) => <Sidebar {...args}></Sidebar>;
+export const Template = (args) => <Navigation {...args}></Navigation>;

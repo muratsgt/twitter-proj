@@ -81,6 +81,7 @@
 
 .tooltip {
     top: 100%;
+    visibility: hidden;
 }
 
 .avatar:hover .tooltip {

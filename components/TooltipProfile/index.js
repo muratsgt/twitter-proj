@@ -12,7 +12,7 @@ export default function TooltipProfile({ user, className, ...props }) {
         <div className={cn(styles.body, className)}>
             <div className={styles.actions}>
                 <Link href={user?.adress} >
-                    <a><Avatar src={user?.imageUrl} /></a>
+                    <a><Avatar size="profile" src={user?.imageUrl} /></a>
                 </Link>
                 <FollowButton className={styles.buttontrans}>Follow</FollowButton>
             </div>
