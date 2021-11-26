@@ -26,7 +26,7 @@ function Tweet({ entry, children }) {
                         followers: entry.followers,
                     }}
                 ></TooltipProfile>
-                <Link href={entry?.useradress} >
+                <Link href={`/${entry?.useradress}`} >
                     <a><Avatar src={entry?.userImage} /></a>
                 </Link>
             </div>

@@ -1,3 +1,7 @@
-.nav button+button {
+.nav> div+div {
     margin-top: 8px;
+}
+
+.links {
+    text-decoration: none;
 }

@@ -1,34 +1,32 @@
-import { useState, useEffect } from "react";
 import Layout from "../layout/Layout";
 import Tweet from "../components/Tweet";
 import MainHeader from "../components/MainHeader";
 import ProfileInfo from "../components/ProfileInfo";
-import { CurrentUser } from "../data";
-import { TWEETS } from "../data";
 import { Loading } from "../components/Icons";
 import sortTweets from "../helper/sortTweets";
+import useFetcher from "../helper/useFetcher";
+
+const currentUser = "muratakca9";
 
 function Profile() {
-    const [userTweets, setUserTweets] = useState([]);
-
-    useEffect(() => {
-        const tempTweets = TWEETS.filter((item) => item.useradress === CurrentUser.adress);
-        console.log(`tempTweets`, tempTweets)
-        setUserTweets(tempTweets);
-        return () => {
-            setUserTweets(null);
-        }
-    }, [])
+    const userInfo = useFetcher(`/api/user/${currentUser}`);
+    const userTweets = useFetcher(`/api/tweet?user=${currentUser}`);
 
     return (
         <Layout>
-            <MainHeader back title={CurrentUser?.adress} tweetNum={33}></MainHeader>
+            <MainHeader
+                back
+                title={userInfo?.data?.adress}
+                tweetNum={37}>
+            </MainHeader>
             {
-                CurrentUser ? <ProfileInfo user={CurrentUser}></ProfileInfo>
-                    : <Loading />
+                userInfo.isLoading ? <Loading />
+                    : <ProfileInfo user={userInfo.data}></ProfileInfo>
             }
             {
-                sortTweets(userTweets)?.map((entry) => <Tweet key={entry._id} entry={entry}></Tweet>)
+                userTweets.isLoading ? <Loading />
+                    : sortTweets(userTweets.data)
+                        .map((entry) => <Tweet key={entry._id} entry={entry}></Tweet>)
             }
         </Layout>
     )

@@ -14,25 +14,33 @@ export default function Navigation({ wide = true, children }) {
 
     return (
         <nav className={styles.nav}>
-            <Link href={"/"}>
-                <NavButton >
-                    <Twitter style={{ fontSize: 30}} />
-                </NavButton>
-            </Link>
+            <div>
+                <Link href={"/"} >
+                    <a className={styles.links}>
+                        <NavButton >
+                            <Twitter style={{ fontSize: 30 }} />
+                        </NavButton>
+                    </a>
+                </Link>
+            </div>
 
             {MENU.map((b) => {
                 const notif = b.notify ? b.notify : null;
                 const selected = selectedKey === b.path;
                 return (
-                    <Link key={b.key} href={b.path}>
-                        <NavButton
-                            notify={notif}
-                            selected={selected}
-                        >
-                            {selected ? b.compfill : b.comp}
-                            {wide && <TextTitle bold={selected}>{b.key}</TextTitle>}
-                        </NavButton>
-                    </Link>
+                    <div key={b.key}>
+                        <Link href={b.path}>
+                            <a className={styles.links}>
+                                <NavButton
+                                    notify={notif}
+                                    selected={selected}
+                                >
+                                    {selected ? b.compfill : b.comp}
+                                    {wide && <TextTitle bold={selected}>{b.key}</TextTitle>}
+                                </NavButton>
+                            </a>
+                        </Link>
+                    </div>
                 )
             })}
             {children}

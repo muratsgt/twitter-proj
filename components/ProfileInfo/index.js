@@ -38,13 +38,13 @@ function ProfileInfo({ user, children, ...props }) {
                                 </span>) : null
                         }
                         <span>
-                            <Icon.Messages /> Joined {format(user.joined, "MMMM yyyy")}
+                            <Icon.Messages /> Joined {format(Date.parse(user.joined), "MMMM yyyy")}
                         </span>
                     </TextBody>
                 </div>
                 <div className={styles.links}>
-                    <Link href="/following"><a><span>{numFormatter(user.following)}</span> Following</a></Link>
-                    <Link href="/followers"><a><span>{numFormatter(user.followers)}</span> Followers</a></Link>
+                    <Link href={user.adress + "/following"}><a><span>{numFormatter(user.following)}</span> Following</a></Link>
+                    <Link href={user.adress + "/followers"}><a><span>{numFormatter(user.followers)}</span> Followers</a></Link>
                 </div>
             </div>
 
