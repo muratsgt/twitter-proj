@@ -18,7 +18,7 @@
     gap: 10px;
 }
 
-.actions > * {
+.actions>* {
     border: 1px solid var(--c-border-color);
 }
 
@@ -37,17 +37,28 @@
     z-index: 1;
 }
 
+@media screen and (max-width: 720px) {
+    .profilePicture {
+        width: 18vw;
+        top: 18vw;
+    }
+
+    .profilePicture img {
+        outline: 3px solid var(--c-primary);
+    }
+}
+
 .bio {
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
-.date{
+.date {
     color: var(--c-gray);
     white-space: pre-wrap;
 }
 
-.date span{
+.date span {
     margin-right: 10px;
 }
 
@@ -55,13 +66,13 @@
     margin-top: 10px;
 }
 
-.links a{
+.links a {
     text-decoration: none;
     margin-right: 10px;
     color: var(--c-gray);
 }
 
-.links a:hover{
+.links a:hover {
     text-decoration: underline 1px white;
 }
 
