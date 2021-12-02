@@ -1,16 +1,3 @@
-export const CurrentUser = {
-    name: "Murat Akca",
-    adress: "muratakca9",
-    bannerUrl: "https://pbs.twimg.com/profile_banners/1282691206485610497/1605470153/1500x500",
-    imageUrl: "https://pbs.twimg.com/profile_images/1328063163745579008/rVqZJRCd_400x400.jpg",
-    bio: "Always wanna be a settler, but couldn't do it yet.",
-    joined: new Date("2019-09-09"),
-    location: "Deutschland",
-    following: 376,
-    followers: 259,
-};
-
-
 export const USERS = [
     {
         name: "Elon Musk",
@@ -53,12 +40,16 @@ export const USERS = [
         adress: "muratakca9",
         bannerUrl: "https://pbs.twimg.com/profile_banners/1282691206485610497/1605470153/1080x360",
         imageUrl: "https://pbs.twimg.com/profile_images/1328063163745579008/rVqZJRCd_400x400.jpg",
-        bio: "Always wanna be a settler, but couldn't do it yet.",
+        bio: "The greatest glory in living lies not in never failing, but in rising every time we fail.",
         joined: new Date("2019-09-09"),
         location: "Deutschland",
         following: 376,
         followers: 259,
         followed: true,
+        follows: [
+            "elonmusk",
+            "Cristiano"
+        ]
     }
 ];
 
@@ -69,7 +60,7 @@ export const TWEETS = [
         username: "Murat Akca",
         useradress: "muratakca9",
         userImage:"https://pbs.twimg.com/profile_images/1328063163745579008/rVqZJRCd_400x400.jpg",
-        bio: "Always wanna be a settler, but couldn't do it yet.",
+        bio: "The greatest glory in living lies not in never failing, but in rising every time we fail.",
         following: 376,
         followers: 259,
         content: 'Sometimes, your biggest obstacle is getting started!',

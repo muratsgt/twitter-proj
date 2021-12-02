@@ -24,7 +24,7 @@ function ProfileInfo({ user, children, ...props }) {
                 <div className={styles.actions}>
                     <IconButton><Icon.Dots></Icon.Dots></IconButton>
                     <IconButton><Icon.Messages></Icon.Messages></IconButton>
-                    <FollowButton>Follow</FollowButton>
+                    <FollowButton target={user?.adress}></FollowButton>
                 </div>
                 <div className={styles.info}>
                     <TextTitle bold>{user.name}</TextTitle>

@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from "./style.module.css";
-import Button from "../buttons/Button";
 import FollowButton from '../buttons/FollowButton';
 import Avatar from '../Avatar';
 import { TextBody } from '../Text';
@@ -13,17 +12,19 @@ export function Who({ user, children, className, ...props }) {
     const handleClick = () => router.push(user.adress);
 
     return (
-        <div onClick={handleClick} className={cn(styles.box, className)} {...props}>
-            <Avatar src={user.imageUrl} size="tweet" />
+        <div className={cn(styles.box, className)} {...props}>
             <TooltipProfile
                 className={styles.tooltip}
                 user={user}
             ></TooltipProfile>
-            <div className={styles.body}>
-                <TextBody bold>{user.name}</TextBody>
-                <TextBody className={styles.adres}>@{user.adress}</TextBody>
+            <div className={styles.clickablebox} onClick={handleClick}>
+                <Avatar src={user.imageUrl} size="tweet" />
+                <div className={styles.body}>
+                    <TextBody bold>{user.name}</TextBody>
+                    <TextBody className={styles.adres}>@{user.adress}</TextBody>
+                </div>
             </div>
-            <FollowButton className={styles.followButton}>Follow</FollowButton>
+            <FollowButton target={user?.adress} className={styles.followButton}></FollowButton>
             {children}
         </div>
 

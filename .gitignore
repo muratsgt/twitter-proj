@@ -1,10 +1,10 @@
+TODO
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
 public/ui
 NOTs.txt
-
 # testing
 /coverage
 

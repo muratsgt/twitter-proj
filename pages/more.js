@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import Layout from "../layout/Layout";
-import ThemeContext from "../store";
+import {ThemeContext} from "../store";
 import styles from "./more.module.css";
 import MainHeader from "../components/MainHeader";
 

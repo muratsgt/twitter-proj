@@ -1,13 +1,14 @@
-import { useRef } from "react";
+import { useRef, useContext } from "react";
 import styles from "./style.module.css";
 import ThemeButton from "../buttons/ThemeButton";
 import Avatar from '../Avatar';
 import IconButton from '../buttons/IconButton';
 import * as Icon from "../Icons";
-import { CurrentUser } from "../../data";
+import { AuthContext } from '../../store';
 
 
 export default function TweetArea(...props) {
+    const { currentUser } = useContext(AuthContext);
     const hiddenFileInput = useRef(null);
     const handleClick = event => {
         hiddenFileInput.current.click();
@@ -19,7 +20,7 @@ export default function TweetArea(...props) {
 
     return (
         <div className={styles.modalcontainer}>
-            <Avatar src={CurrentUser.imageUrl}></Avatar>
+            <Avatar src={currentUser?.imageUrl}></Avatar>
             <div className={styles.modalbody}>
                 <textarea
                     maxLength={140}

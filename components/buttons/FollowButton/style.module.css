@@ -1,4 +1,4 @@
-.button {
+.button, .following {
     cursor: pointer;
     background-color: var(--c-text-color);
     color: var(--c-primary);
@@ -15,4 +15,27 @@
 
 .button:hover {
     opacity: 0.7;
+}
+
+.following {
+    background-color: transparent;
+    color: var(--c-text-color);
+    border: var(--c-border-color) solid 1px;
+}
+
+.following:hover {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: crimson;
+    border: crimson solid 1px;
+}
+
+.following p:last-child{
+    display: none;
+}
+
+.following:hover p:last-child{
+    display: block;
+}
+.following:hover p:first-child{
+    display: none;
 }

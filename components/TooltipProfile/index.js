@@ -14,7 +14,7 @@ export default function TooltipProfile({ user, className, ...props }) {
                 <Link href={user?.adress} >
                     <a><Avatar size="profile" src={user?.imageUrl} /></a>
                 </Link>
-                <FollowButton className={styles.buttontrans}>Follow</FollowButton>
+                <FollowButton target={user?.adress} className={styles.buttontrans}></FollowButton>
             </div>
             <div className={styles.info}>
                 <TextTitle bold>{user.name}</TextTitle>
@@ -22,8 +22,8 @@ export default function TooltipProfile({ user, className, ...props }) {
                 <TextBody className={styles.bio}>{user.bio}</TextBody>
             </div>
             <div className={styles.links}>
-                <Link href="/following"><a><span>{numFormatter(user.following)}</span> Following</a></Link>
-                <Link href="/followers"><a><span>{numFormatter(user.followers)}</span> Followers</a></Link>
+                <Link href={`/${user.adress}/following`}><a><span>{numFormatter(user.following)}</span> Following</a></Link>
+                <Link href={`/${user.adress}/followers`}><a><span>{numFormatter(user.followers)}</span> Followers</a></Link>
             </div>
         </div>
     );

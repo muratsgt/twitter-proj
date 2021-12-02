@@ -23,6 +23,11 @@
     flex-direction: row;
     padding: 12px;
     border-radius: 0;
+}
+
+.clickablebox {
+    display: flex;
+    flex-direction: row;
     cursor: pointer;
 }
 

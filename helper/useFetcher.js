@@ -1,7 +1,7 @@
 // import axios from "axios";
 import useSWR from 'swr';
 
-const fetchData = (...args) => fetch(...args).then(res => res.json());
+export const fetchData = (...args) => fetch(...args).then(res => res.json());
 
 const useFetcher = (path) => {
     const { data, error } = useSWR(path, fetchData);
