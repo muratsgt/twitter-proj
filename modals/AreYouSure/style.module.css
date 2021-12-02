@@ -1,0 +1,31 @@
+.modcontain {
+    background-color: var(--c-primary);
+    border-radius: 15px;
+    border: solid 1px var(--c-text-color);
+    padding: 15px 35px 25px 35px;
+    max-width: 270px;
+}
+
+.modcontain  h1 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 3rem;
+}
+
+.modcontain  p {
+    font-size: 1rem;
+    color: var(--c-gray);
+    padding-bottom: 20px;
+}
+
+.buttons {
+    font-weight: bold;
+    border: var(--c-border-color) 1px solid;
+}
+
+.yesbutton{
+    font-weight: bold;
+    color: var(--c-primary);
+    background-color: var(--c-text-color);
+    margin-bottom: 10px;
+}
