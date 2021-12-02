@@ -1,9 +1,10 @@
 import '../styles/globals.css';
-import ThemeContext from "../store";
-import { useState, useEffect} from 'react';
+import { ThemeContext, AuthContextProvider } from "../store";
+import { useState, useEffect } from 'react';
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState("");
+
   const changeTheme = (value) => {
     setTheme(value);
     localStorage.setItem("THEME", value)
@@ -20,9 +21,11 @@ function MyApp({ Component, pageProps }) {
   }, [theme])
 
   return (
-    <ThemeContext.Provider value={{ theme, changeTheme }}>
-      <Component {...pageProps} />
-    </ThemeContext.Provider>
+    <AuthContextProvider>
+      <ThemeContext.Provider value={{ theme, changeTheme }}>
+        <Component {...pageProps} />
+      </ThemeContext.Provider>
+    </AuthContextProvider>
   )
 }
 
