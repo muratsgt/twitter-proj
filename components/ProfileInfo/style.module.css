@@ -29,10 +29,10 @@
     top: 130px;
     left: 15px;
     border-radius: 299px;
+    outline: 5px solid var(--c-primary);
 }
 
 .profilePicture img {
-    outline: 5px solid var(--c-primary);
     border-radius: 299px;
     z-index: 1;
 }
@@ -41,9 +41,6 @@
     .profilePicture {
         width: 18vw;
         top: 18vw;
-    }
-
-    .profilePicture img {
         outline: 3px solid var(--c-primary);
     }
 }
