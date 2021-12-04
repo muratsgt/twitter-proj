@@ -35,12 +35,7 @@ export default Home;
 export async function getServerSideProps(context) {
 
     // get the current environment
-    let SITEURL
-    if (process.env.NEXT_PUBLIC_VERCEL_ENV == "production") {
-        SITEURL = process.env.NEXT_PUBLIC_VERCEL_URL;
-    } else {
-        SITEURL = process.env.NODE_ENV !== 'production' ? process.env.DEV_URL : process.env.PROD_URL;
-    }
+    let SITEURL = process.env.NODE_ENV !== 'production' ? process.env.DEV_URL : process.env.PROD_URL;
 
     // request posts from api
     let response = await fetch(`${SITEURL}/api/tweet`);

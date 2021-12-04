@@ -7,18 +7,6 @@ import { useTrends } from "../helper/useFetcher";
 function Explore({ }) {
     const { data } = useTrends();
 
-    let SITEURL
-    if (process.env.VERCEL) {
-        SITEURL = process.env.VERCEL_URL;
-    } else {
-        SITEURL = process.env.NODE_ENV !== 'production' ? process.env.DEV_URL : process.env.PROD_URL;
-    }
-
-    console.log(`VERCEL`, process.env.VERCEL);
-    console.log(`VERCEL_URL`, process.env.VERCEL_URL);
-    console.log(`SITEURL api`, `${SITEURL}/api/tweet`);
-
-
     return (
         <Layout>
             <MainHeader title="Explore"></MainHeader>
