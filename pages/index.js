@@ -35,12 +35,11 @@ export default Home;
 export async function getServerSideProps(context) {
 
     // get the current environment
-    let { NODE_ENV, DEV_URL, PROD_URL, VERCEL_URL, VERCEL } = process.env;
     let SITEURL
-    if (VERCEL) {
-        SITEURL = VERCEL_URL;
+    if (process.env.NEXT_PUBLIC_VERCEL_ENV == "production") {
+        SITEURL = process.env.NEXT_PUBLIC_VERCEL_URL;
     } else {
-        SITEURL = NODE_ENV !== 'production' ? DEV_URL : PROD_URL;
+        SITEURL = process.env.NODE_ENV !== 'production' ? process.env.DEV_URL : process.env.PROD_URL;
     }
 
     // request posts from api
