@@ -1,8 +1,10 @@
 import styles from "./style.module.css";
 import Link from "next/link";
-import { formatDistanceToNowStrict } from 'date-fns';
+import { formatDistanceToNowStrict, toDate } from 'date-fns';
 
+// header of the tweet, who sent it, etc.
 export function Header(props) {
+    let theDate = toDate(props.entry.time);
     return (
         <header className={styles.header}>
             <Link href={`/${props.entry?.useradress}`}>
@@ -11,7 +13,7 @@ export function Header(props) {
                 </a>
             </Link>
             <span> @{props.entry?.useradress} </span>
-            <span>{"· "}{formatDistanceToNowStrict(Date.parse(props.entry?.time))}</span>
+            <span>{"· "}{formatDistanceToNowStrict(theDate)}</span>
         </header>
     );
 }

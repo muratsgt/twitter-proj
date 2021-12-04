@@ -2,6 +2,7 @@ import Layout from "../layout/Layout";
 import MainHeader from "../components/MainHeader";
 import { NothingHere } from "../components/NothingHere";
 
+// lists page
 function Lists() {
     return (
         <Layout>

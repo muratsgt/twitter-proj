@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useContext } from 'react';
 import styles from "./Sidebar.module.css";
 import Navigation from "../components/Navigation";
 import ThemeButton from "../components/buttons/ThemeButton";
@@ -7,21 +7,14 @@ import { Tweet } from "../components/Icons";
 import 'react-responsive-modal/styles.css';
 import { TweetModal } from '../modals/TweetModal';
 import { AuthContext } from '../store';
-import { fetchData } from '../helper/useFetcher';
 import { Loading } from '../components/Icons';
 
-const myUser = "muratakca9";
-
+// navigation sidebar
 function Sidebar({ wide = true, children, ...props }) {
     const [open, setOpen] = useState(false);
-    const { currentUser, setUser } = useContext(AuthContext);
+    const { currentUser } = useContext(AuthContext);
 
-    useEffect(() => {
-        fetchData(`/api/user/${myUser}`)
-            .then((res) => setUser(res))
-            .catch(err => console.log(`err`, err))
-    }, [])
-
+    // controls for tweet entry modal button
     const onOpenModal = () => setOpen(true);
     const onCloseModal = () => setOpen(false);
 
@@ -42,6 +35,7 @@ function Sidebar({ wide = true, children, ...props }) {
                 <TweetModal
                     open={open}
                     onCloseModal={onCloseModal}
+                    currentUser={currentUser}
                 ></TweetModal>
                 {children}
             </div>

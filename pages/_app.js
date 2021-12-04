@@ -1,32 +1,56 @@
 import '../styles/globals.css';
-import { ThemeContext, AuthContextProvider } from "../store";
+import { ThemeContext, AuthContext } from "../store";
 import { useState, useEffect } from 'react';
+import { fetchData } from "../helper/useFetcher";
+
+// TODO: after login page
+const myUser = "muratakca9";
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState("");
+  const [currentUser, setcurrentUser] = useState({});
+  console.log(`APP : currentUser`, currentUser);
+
+  useEffect(() => {
+    // get last theme from local
+    const lastTheme = localStorage.getItem("THEME");
+    setTheme(lastTheme);
+
+    // const lastUser = localStorage.getItem("LASTUSER");
+    // setcurrentUser(JSON.parse(lastUser));
+    // fetch data of the current user
+    fetchData(`/api/user/${myUser}`)
+      .then((res) => {
+        setcurrentUser(res);
+        // localStorage.setItem("LASTUSER", JSON.stringify(res));
+        console.log(`APP - SETUSER- RES`, res);
+      })
+      .catch(err => console.log(`err`, err))
+  }, [])
+
+  // change html class according to theme
+  useEffect(() => {
+    const $html = document.querySelector("html");
+    $html.className = theme;
+  }, [theme])
+
+  const setUser = (val) => {
+    setcurrentUser(val);
+  }
 
   const changeTheme = (value) => {
     setTheme(value);
     localStorage.setItem("THEME", value)
   };
 
-  useEffect(() => {
-    const lastTheme = localStorage.getItem("THEME");
-    setTheme(lastTheme);
-  }, [])
-
-  useEffect(() => {
-    const $html = document.querySelector("html");
-    $html.className = theme;
-  }, [theme])
 
   return (
-    <AuthContextProvider>
+    <AuthContext.Provider value={{ currentUser, setUser }}>
       <ThemeContext.Provider value={{ theme, changeTheme }}>
         <Component {...pageProps} />
       </ThemeContext.Provider>
-    </AuthContextProvider>
+    </AuthContext.Provider>
   )
 }
 
-export default MyApp
+export default MyApp;

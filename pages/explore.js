@@ -1,9 +1,11 @@
 import Layout from "../layout/Layout";
 import MainHeader from "../components/MainHeader";
 import TrendsBox from "../components/TrendsBox";
-import {EXPLORETRENDS} from "../data";
+import { useTrends } from "../helper/useFetcher";
 
-function Explore() {
+// page for explore
+function Explore({  }) {
+    const { data } = useTrends();
     return (
         <Layout>
             <MainHeader title="Explore"></MainHeader>
@@ -13,7 +15,7 @@ function Explore() {
                 alt="explore"
                 title="The Facebook Company Is Now Meta"
             />
-            <TrendsBox trends={EXPLORETRENDS}></TrendsBox>
+            {data && <TrendsBox trends={data}></TrendsBox>}
         </Layout>
     )
 };

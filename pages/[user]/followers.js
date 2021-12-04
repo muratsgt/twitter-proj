@@ -1,22 +1,15 @@
-import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Layout from "../../layout/Layout";
 import MainHeader from "../../components/MainHeader";
-import { USERS } from "../../data";
+import useFetcher from "../../helper/useFetcher";
 
 function Followers() {
-    const [profile, setProfile] = useState({});
     const router = useRouter();
-
-    useEffect(() => {
-        const { user } = router.query;
-        const temp = USERS.find((i) => i.adress === user);
-        setProfile(temp);
-    }, [router.query])
+    const {data} = useFetcher(`/api/user/${router?.query?.user}`);
 
     return (
         <Layout>
-            <MainHeader back title={profile?.name + " - Followers"}></MainHeader>
+            <MainHeader back title={data?.name + " - Followers"}></MainHeader>
         </Layout>
     )
 };

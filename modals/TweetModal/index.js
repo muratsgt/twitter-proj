@@ -6,27 +6,43 @@ import Avatar from '../../components/Avatar';
 import IconButton from '../../components/buttons/IconButton';
 import * as Icon from "../../components/Icons";
 import cn from "classnames";
+import { sendTweet } from "../../helper/sendTweet";
+import { useRouter } from 'next/router';
 
+// TODO: add file, picture upload funtions
 
-export function TweetWriter(className, ...props) {
+// tweet writer component
+export function TweetWriter({currentUser, className, ...props}) {
+    const router = useRouter();
+    // to hide file input div
     const hiddenFileInput = useRef(null);
     const handleClick = event => {
         hiddenFileInput.current.click();
     };
+    // handle uploaded file
     const handleChange = event => {
         const fileUploaded = event.target.files[0];
         // props.handleFile(fileUploaded);
     };
 
+    // send tweet to server and close modal
+    const handleTweet = async () => {
+        const newEntry = document.getElementById("tweetEntryModal").value;
+        sendTweet(currentUser, newEntry);
+        props.onClose();
+        router.replace(router.asPath);
+    }
+
     return (
         <div className={cn(styles.modalcontainer, className)}>
-            <Avatar></Avatar>
+            <Avatar src={currentUser?.imageUrl}></Avatar>
             <div className={styles.modalbody}>
                 <div>
                     <textarea
                         placeholder="What's happening?"
                         className={styles.inputBox}
-                        type="text" />
+                        type="text"
+                        id="tweetEntryModal"/>
                     <input type="file" ref={hiddenFileInput} onChange={handleChange} style={{
                         display: 'none'
                     }} />
@@ -35,16 +51,15 @@ export function TweetWriter(className, ...props) {
                     <IconButton onClick={handleClick}><Icon.Media></Icon.Media></IconButton>
                     <IconButton><Icon.Gif></Icon.Gif></IconButton>
                     <IconButton><Icon.Emoji></Icon.Emoji></IconButton>
-                    <ThemeButton className={styles.tweetbutton}>Tweet</ThemeButton>
+                    <ThemeButton onClick={handleTweet} className={styles.tweetbutton}>Tweet</ThemeButton>
                 </div>
             </div>
         </div>
     );
 }
 
-
-export function TweetModal({ className, ...props }) {
-
+// tweet writer modal
+export function TweetModal({ currentUser, className, ...props }) {
     return (
         <Modal
             classNames={{ modal: cn(styles.modal, className) }}
@@ -52,6 +67,6 @@ export function TweetModal({ className, ...props }) {
             onClose={props.onCloseModal}
             center
         >
-            <TweetWriter home={false} />
+            <TweetWriter onClose={props.onCloseModal} currentUser={currentUser} home={false} />
         </Modal>);
 }

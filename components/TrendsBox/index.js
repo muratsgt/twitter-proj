@@ -3,6 +3,7 @@ import styles from "./style.module.css";
 import { Options } from "../Icons";
 import { Topic } from './Topic';
 
+// trends box, to show current trends
 function TrendsBox({ trends, ...props }) {
     return (
         <div className={styles.container}>
@@ -15,7 +16,6 @@ function TrendsBox({ trends, ...props }) {
             {
                 trends.map((trend) => <Topic key={trend.hashTag} trend={trend}></Topic>)
             }
-
         </div>
     )
 }

@@ -6,8 +6,10 @@ import { Header } from "./Header";
 import { useRouter } from "next/router";
 import TooltipProfile from "../TooltipProfile";
 
+// main component of a tweet
 function Tweet({ entry, children }) {
     const router = useRouter();
+    // route to the individual tweet page
     const handleClick = () => {
         router.push(`/${entry.useradress}/status/${entry._id}`)
     }

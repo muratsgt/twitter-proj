@@ -3,15 +3,18 @@ import SearchBar from "../components/SearchBar";
 import TrendsBox from "../components/TrendsBox";
 import FollowBox from "../components/FollowBox";
 import cn from "classnames";
-import {TRENDS} from "../data";
+import { useTrends } from "../helper/useFetcher";
 
+// right column on page
 function Extra({ desktop = true, children, className, ...props }) {
+    const { data } = useTrends();
 
+    // shows component according to screen width
     return (
         desktop ? (<div className={cn(styles.extra, className)
         } {...props}>
             <SearchBar className={styles.search} ></SearchBar>
-            <TrendsBox trends={TRENDS}></TrendsBox>
+            {data && <TrendsBox trends={data.slice(0, 4)}></TrendsBox>}
             <FollowBox ></FollowBox>
             {children}
         </div >

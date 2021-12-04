@@ -5,6 +5,8 @@ import { TextBody } from '../../Text';
 import { Dots } from "../../Icons"
 import cn from "classnames";
 
+// TODO: add action, when clicked
+// profile button at the left bottom of page
 export default function ProfileButton({ wide = true, name, adress, children, className, ...props }) {
     return (
         <Button full className={cn(styles.box, className)} {...props}>

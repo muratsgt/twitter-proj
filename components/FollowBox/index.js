@@ -1,9 +1,11 @@
 import React from 'react';
 import styles from "./style.module.css";
 import { Who } from './Who';
-import { USERS } from "../../data";
+import { useUsers } from '../../helper/useFetcher';
 
+// who to follow box, at the right column
 function FollowBox({ className, children, ...props }) {
+    const { data } = useUsers();
     return (
         <div className={styles.container} {...props}>
             <header className={styles.header}>
@@ -11,9 +13,7 @@ function FollowBox({ className, children, ...props }) {
                     Who to follow
                 </span>
             </header>
-            {
-                USERS.slice(0, 3).map((user) => <Who key={user.adress} user={user}></Who>)
-            }
+            {data && data.slice(1, 4).map((user) => <Who key={user.adress} user={user}></Who>)}
             {children}
         </div>
     )

@@ -8,6 +8,7 @@ import sortTweets from "../../helper/sortTweets";
 import useFetcher from "../../helper/useFetcher";
 import { NothingHere } from "../../components/NothingHere";
 
+// page of any user
 function Userpage() {
     const router = useRouter();
     // fetcher returns : data, isLoading, isError

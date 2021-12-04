@@ -2,6 +2,7 @@ import Layout from "../layout/Layout";
 import MainHeader from "../components/MainHeader";
 import { NothingHere } from "../components/NothingHere";
 
+// messages page
 function Messages() {
     return (
         <Layout>

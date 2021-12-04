@@ -3,6 +3,7 @@ import Button from "../buttons/Button";
 import * as Icon from "../Icons";
 import numFormatter from '../../helper/numFormatter';
 
+// footer of a tweet component
 const Footer = ({entry}) => {
     return (
         <footer className={styles.footer}>

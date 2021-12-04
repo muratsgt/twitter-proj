@@ -6,7 +6,7 @@ import IconButton from '../buttons/IconButton';
 import { ArrowLeft } from "../Icons";
 import { useRouter } from 'next/router'
 
-
+// main header for the pages
 function MainHeader({ className, title, tweetNum, back, ...props }) {
     const router = useRouter();
     const handleBack = () => router.back();

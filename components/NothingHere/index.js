@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from "./style.module.css";
 
+// for the empty pages, like notification usw.
 export function NothingHere({message, detail, ...props}) {
     return (
         <div className={styles.container}>

@@ -1,28 +1,57 @@
 import Layout from "../layout/Layout";
 import Tweet from "../components/Tweet";
 import MainHeader from "../components/MainHeader";
-import sortTweets from "../helper/sortTweets";
 import TweetArea from "../components/TweetArea";
-import useFetcher from "../helper/useFetcher";
 import { Loading } from "../components/Icons";
-import { NothingHere } from "../components/NothingHere";
+// import { useTweets } from "../helper/useFetcher";
+// import { useRouter } from 'next/router';
+// import { useEffect } from "react";
 
-function Home() {
-    const { data, isLoading, isError } = useFetcher('/api/tweet');
+// home page, shows all tweets
+function Home({ tweets }) {
+    // const { data } = useTweets();
+    // const router = useRouter();
+    // useEffect(() => {
+    //     router.replace(router.asPath);
+    // }, [])
 
     return (
         <Layout>
             <MainHeader title="Home"></MainHeader>
             <TweetArea />
             {
-                isError ? <NothingHere message="failed to load data" />
-                    : (
-                        isLoading ? <Loading></Loading>
-                            : sortTweets(data).map(twit => <Tweet key={twit._id} entry={twit}></Tweet>)
-                    )
+                tweets ? tweets.map(twit => <Tweet key={twit._id} entry={twit}></Tweet>)
+                    : <Loading />
             }
         </Layout>
     )
 };
 
 export default Home;
+
+
+export async function getServerSideProps(context) {
+    try {
+        // get the current environment
+        let { NODE_ENV, DEV_URL, PROD_URL, VERCEL_URL, VERCEL } = process.env;
+        let SITEURL
+        if (VERCEL) {
+            SITEURL = VERCEL_URL;
+        } else {
+            SITEURL = NODE_ENV !== 'production' ? DEV_URL : PROD_URL;
+        }
+
+        // request posts from api
+        let response = await fetch(`${SITEURL}/api/tweet`);
+        const tweets = await response.json();
+
+        return {
+            props: { tweets: tweets },
+        }
+    } catch (e) {
+        console.error(e)
+        return {
+            notFound: true
+        }
+    }
+}

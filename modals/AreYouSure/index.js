@@ -1,17 +1,17 @@
-import { useRef } from "react";
 import styles from "./style.module.css";
 import { Modal } from 'react-responsive-modal';
 import cn from "classnames";
 import Button from "../../components/buttons/Button";
 
-export function AreYouSure({title, message, setResult, className, ...props }) {
-
+// a reusable modal, for "are you sure" questions
+export function AreYouSure({ title, message, setResult, className, children, ...props }) {
+    // cancel button
     const cancel = () => {
         props.onCloseModal();
     }
-
+    // runs the function in case of yes
     const handleYes = () => {
-        setResult(status => !status)
+        setResult()
         props.onCloseModal();
     }
 
@@ -24,8 +24,8 @@ export function AreYouSure({title, message, setResult, className, ...props }) {
         >
             <h1>{title}</h1>
             <p>{message}</p>
-            <Button full big onClick={handleYes} className={styles.yesbutton}>Unfollow</Button>
+            <Button full big onClick={handleYes} className={styles.yesbutton}>{children}</Button>
             <Button full big onClick={cancel} className={styles.buttons}>Cancel</Button>
-
-        </Modal>);
+        </Modal>
+    );
 }

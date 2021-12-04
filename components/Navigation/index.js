@@ -1,13 +1,13 @@
 import styles from "./style.module.css";
+import React from 'react';
+import { useRouter } from 'next/router'
+import Link from 'next/link';
 import NavButton from "../buttons/NavButton";
 import { TextTitle } from "../Text";
 import { Twitter } from "../Icons";
 import { MENU } from '../../constants';
 
-import React from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router'
-
+// navigation buttons at the left sidebar
 export default function Navigation({ wide = true, children }) {
     const router = useRouter();
     const selectedKey = router?.asPath;

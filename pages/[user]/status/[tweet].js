@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Layout from "../../../layout/Layout";
 import Tweet from "../../../components/Tweet";
@@ -7,9 +6,10 @@ import useFetcher from "../../../helper/useFetcher";
 import { Loading } from "../../../components/Icons";
 import { NothingHere } from "../../../components/NothingHere";
 
-
+// page to show one tweet
 function TweetPage() {
     const router = useRouter();
+    // fetch data of tweet from server
     const { data, isLoading, isError } = useFetcher(`/api/tweet/${router.query.tweet}`);
 
     return (

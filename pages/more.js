@@ -4,6 +4,7 @@ import {ThemeContext} from "../store";
 import styles from "./more.module.css";
 import MainHeader from "../components/MainHeader";
 
+// options to change theme
 function More() {
     const context = useContext(ThemeContext);
     const handleChange = (e) => {

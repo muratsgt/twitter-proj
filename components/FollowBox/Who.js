@@ -7,9 +7,10 @@ import cn from "classnames";
 import { useRouter } from 'next/router';
 import TooltipProfile from "../TooltipProfile";
 
+// a user element, to show in who to follow box
 export function Who({ user, children, className, ...props }) {
     const router = useRouter();
-    const handleClick = () => router.push(user.adress);
+    const handleClick = () => router.push(`/${user.adress}`);
 
     return (
         <div className={cn(styles.box, className)} {...props}>
