@@ -7,17 +7,15 @@ import { useTrends } from "../helper/useFetcher";
 function Explore({ }) {
     const { data } = useTrends();
 
-    let { NODE_ENV, DEV_URL, PROD_URL, VERCEL_URL, VERCEL } = process.env;
     let SITEURL
-    if (VERCEL) {
-        SITEURL = VERCEL_URL;
+    if (process.env.VERCEL) {
+        SITEURL = process.env.VERCEL_URL;
     } else {
-        SITEURL = NODE_ENV !== 'production' ? DEV_URL : PROD_URL;
+        SITEURL = process.env.NODE_ENV !== 'production' ? process.env.DEV_URL : process.env.PROD_URL;
     }
 
-    console.log(`VERCEL`, VERCEL);
-    console.log(`VERCEL_URL`, VERCEL_URL);
-    console.log(`NODE_ENV`, NODE_ENV);
+    console.log(`VERCEL`, process.env.VERCEL);
+    console.log(`VERCEL_URL`, process.env.VERCEL_URL);
     console.log(`SITEURL api`, `${SITEURL}/api/tweet`);
 
 
