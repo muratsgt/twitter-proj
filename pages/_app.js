@@ -9,7 +9,6 @@ const myUser = "muratakca9";
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState("");
   const [currentUser, setcurrentUser] = useState({});
-  console.log(`APP : currentUser`, currentUser);
 
   useEffect(() => {
     // get last theme from local
@@ -23,7 +22,6 @@ function MyApp({ Component, pageProps }) {
       .then((res) => {
         setcurrentUser(res);
         // localStorage.setItem("LASTUSER", JSON.stringify(res));
-        console.log(`APP - SETUSER- RES`, res);
       })
       .catch(err => console.log(`err`, err))
   }, [])

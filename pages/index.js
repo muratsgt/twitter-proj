@@ -4,16 +4,18 @@ import MainHeader from "../components/MainHeader";
 import TweetArea from "../components/TweetArea";
 import { Loading } from "../components/Icons";
 // import { useTweets } from "../helper/useFetcher";
-// import { useRouter } from 'next/router';
-// import { useEffect } from "react";
+import { useRouter } from 'next/router';
+import { useEffect } from "react";
 
 // home page, shows all tweets
-function Home({ tweets }) {
+function Home({ tweets, myurl }) {
     // const { data } = useTweets();
-    // const router = useRouter();
-    // useEffect(() => {
-    //     router.replace(router.asPath);
-    // }, [])
+    console.log(`myurl`, myurl);
+    console.log(`tweets`, tweets);
+    const router = useRouter();
+    useEffect(() => {
+        router.replace(router.asPath);
+    }, [])
 
     return (
         <Layout>
@@ -31,27 +33,21 @@ export default Home;
 
 
 export async function getServerSideProps(context) {
-    try {
-        // get the current environment
-        let { NODE_ENV, DEV_URL, PROD_URL, VERCEL_URL, VERCEL } = process.env;
-        let SITEURL
-        if (VERCEL) {
-            SITEURL = VERCEL_URL;
-        } else {
-            SITEURL = NODE_ENV !== 'production' ? DEV_URL : PROD_URL;
-        }
 
-        // request posts from api
-        let response = await fetch(`${SITEURL}/api/tweet`);
-        const tweets = await response.json();
+    // get the current environment
+    let { NODE_ENV, DEV_URL, PROD_URL, VERCEL_URL, VERCEL } = process.env;
+    let SITEURL
+    if (VERCEL) {
+        SITEURL = VERCEL_URL;
+    } else {
+        SITEURL = NODE_ENV !== 'production' ? DEV_URL : PROD_URL;
+    }
 
-        return {
-            props: { tweets: tweets },
-        }
-    } catch (e) {
-        console.error(e)
-        return {
-            notFound: true
-        }
+    // request posts from api
+    let response = await fetch(`${SITEURL}/api/tweet`);
+    const tweets = await response.json();
+
+    return {
+        props: { tweets: tweets, myurl: `${SITEURL}/api/tweet` },
     }
 }
